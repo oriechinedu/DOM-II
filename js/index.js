@@ -8,6 +8,16 @@ images.forEach(image => {
     setTimeout(() => {
       image.classList.remove('hovered');
     }, 500);
+    image.addEventListener('drag', (evt) => {
+      image.animate([
+        { transform: 'translateY(0px)' },
+        { transform: 'translateY(30px)' }
+      ],
+      { 
+        duration: 2000,
+        iterations: 2
+      })
+    })
   })
 
 })
@@ -29,8 +39,8 @@ paragraphs.forEach(p => {
     setTimeout(() => {
       p.style.fontSize = `16px`
     }, 2000)
-  } )
-  
-
+  })
 })
+
+
 
