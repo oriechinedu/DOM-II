@@ -70,4 +70,15 @@ logo.addEventListener('mouseleave', () => {
   logo.style = 'transform:scale(1); border-bottom: 0px; color: black;'
 })
 
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  })
+
+})
+
 
