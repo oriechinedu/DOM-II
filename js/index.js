@@ -1,7 +1,8 @@
 // Your code goes here
 
 const images = document.querySelectorAll('img')
-
+const body = document.querySelector('body')
+const logo = document.querySelector('.logo-heading') 
 images.forEach(image => {
   image.addEventListener('mouseover', () => {
     image.classList.add('hovered');
@@ -39,6 +40,14 @@ paragraphs.forEach(p => {
     setTimeout(() => {
       p.style.fontSize = `16px`
     }, 2000)
+  })
+})
+
+window.addEventListener('load', () => {
+  body.setAttribute('style', 'background-color: green; color: white; transition: 1s ease-in-out; opacity: 0.5')
+  logo.style.color = 'black'
+  setTimeout(() =>{
+    body.setAttribute('style', 'background-color: green; color: white; transition: 1s ease-in-out; opacity: 1')
   })
 })
 
