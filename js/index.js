@@ -3,6 +3,8 @@
 const images = document.querySelectorAll('img')
 const body = document.querySelector('body')
 const logo = document.querySelector('.logo-heading') 
+const buttons = document.querySelectorAll('.btn') 
+const navLinks = document.querySelectorAll('nav a')
 images.forEach(image => {
   image.addEventListener('mouseover', () => {
     image.classList.add('hovered');
@@ -51,5 +53,21 @@ window.addEventListener('load', () => {
   })
 })
 
+
+navLinks.forEach(navItem => {
+  navItem.addEventListener('mouseenter', () => {
+    navItem.style.transform = 'scale(1.2)'
+  })
+  navItem.addEventListener('mouseleave', () => {
+    navItem.style.transform = 'scale(1)'
+  })
+})
+
+logo.addEventListener('mouseenter', () => {
+  logo.style = 'transform:scale(1.2); border-bottom: 2px solid black; color: black;'
+})
+logo.addEventListener('mouseleave', () => {
+  logo.style = 'transform:scale(1); border-bottom: 0px; color: black;'
+})
 
 
