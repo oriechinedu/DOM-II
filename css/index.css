@@ -350,3 +350,7 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.home .hovered {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.1, 1);
+}
