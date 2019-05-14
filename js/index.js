@@ -4,6 +4,7 @@ const images = document.querySelectorAll('img')
 const body = document.querySelector('body')
 const logo = document.querySelector('.logo-heading') 
 const buttons = document.querySelectorAll('.btn') 
+const titles = document.querySelectorAll('h2')
 const navLinks = document.querySelectorAll('nav a')
 images.forEach(image => {
   image.addEventListener('mouseover', () => {
@@ -78,7 +79,21 @@ buttons.forEach(btn => {
       behavior: 'smooth'
     })
   })
-
 })
+
+titles.forEach(h2 => {
+  h2.addEventListener('dblclick', () => {
+    h2.animate([
+      { transform: 'translateX(0px)' },
+      { transform: 'translateX(300px)' }
+    ],
+    { 
+      duration: 1000,
+      iterations: 1
+    })
+  })
+})
+
+
 
 
