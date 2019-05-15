@@ -62,6 +62,9 @@ navLinks.forEach(navItem => {
   navItem.addEventListener('mouseleave', () => {
     navItem.style.transform = 'scale(1)'
   })
+  navItem.addEventListener('click', (e) => {
+    e.preventDefault()
+  })
 })
 
 logo.addEventListener('mouseenter', () => {
