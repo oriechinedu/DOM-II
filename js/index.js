@@ -94,6 +94,44 @@ titles.forEach(h2 => {
   })
 })
 
+const contentSection = document.querySelector('.content-section')
 
+const textContent = contentSection.querySelector('.text-content')
+const imgContent = contentSection.querySelector('.img-content')
+
+
+contentSection.addEventListener('click', () => {
+  console.log('container')
+})
+
+textContent.addEventListener('click', (event) => {
+  event.stopPropagation() //prevents the event from reaching the parent contentSection
+  console.log('text content')
+})
+imgContent.addEventListener('click', (event) => {
+  event.stopPropagation() //prevents the event from reaching the parent contentSection
+  console.log('img content')
+})
+
+textContent.addEventListener('mouseenter', (event) => {
+  event.stopImmediatePropagation()
+  console.log('mouse entered text content ')
+})
+textContent.addEventListener('click', (event) => {
+  event.stopImmediatePropagation() // prevents the rest of the listeners below from executing
+  console.log('clicked text content 1 ')
+})
+textContent.addEventListener('click', (event) => {
+  console.log('clicked text content 2 ')
+})
+textContent.addEventListener('click', (event) => {
+  console.log('clicked text content 3 ')
+})
+textContent.addEventListener('click', (event) => {
+  console.log('clicked text content 4 ')
+})
+
+
+ 
 
 
